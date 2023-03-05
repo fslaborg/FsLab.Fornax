@@ -13,7 +13,7 @@
     <Compile Include="TemplateConfig.fs" />
     <Compile Include="Components\DefaultLinks.fs" />
     <Compile Include="Components\Icon.fs" />
-    <Compile Include="Components\Nabvbar.fs" />
+    <Compile Include="Components\Navbar.fs" />
     <Compile Include="Components\Footer.fs" />
     <Compile Include="Components.fs" />
   </ItemGroup>
