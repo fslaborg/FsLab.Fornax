@@ -6,20 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Library.fs" />
-    <Compile Include="Components\Root.fs" />
-    <Compile Include="Components/Navbar.fs" />
+    <Content Include="_lib\Fornax.Core.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib\$(TargetFramework)</PackagePath>
+    </Content>
+    <Compile Include="TemplateConfig.fs" />
+    <Compile Include="Components\DefaultLinks.fs" />
+    <Compile Include="Components\Icon.fs" />
+    <Compile Include="Components\Nabvbar.fs" />
+    <Compile Include="Components\Footer.fs" />
+    <Compile Include="Components.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Fornax">
       <HintPath>_lib\Fornax.Core.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="_lib\Fornax.Core.dll">
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)</PackagePath>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="5.*" />
