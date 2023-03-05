@@ -1,12 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Library.fs" />
+    <Compile Include="Components\Root.fs" />
+    <Compile Include="Components/Navbar.fs" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Reference Include="Fornax">
+      <HintPath>_lib\Fornax.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_lib\Fornax.Core.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib\$(TargetFramework)</PackagePath>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.*" />
+    <PackageReference Include="Markdig" Version="0.30.2" />
+  </ItemGroup>
 </Project>

@@ -14,6 +14,7 @@ let generate' (ctx : SiteContents) (_: string) =
         ]
     ]
 
-
+// For a generator file to be used in fornax (meaning as a generator in the Fornax config in `config.fsx`),
+// it must always end with a `generate` function that returns a string (which is the content that gets written to a file)
 let generate (ctx : SiteContents) (projectRoot: string) (page: string) =
     generate' ctx page
