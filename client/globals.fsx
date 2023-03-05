@@ -1,4 +1,4 @@
-
+#r "nuget: FsLab.Fornax, 0.0.0"
 
 #if WATCH
 let urlPrefix = 

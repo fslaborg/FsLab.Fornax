@@ -39,25 +39,45 @@ let pack = BuildTask.create "Pack" [clean; build; runTests] {
     else failwith "aborted"
 }
 
+let packLocal = BuildTask.create "PackLocal" [] {
+
+    !! "src/FsLab.Fornax/FsLab.Fornax.fsproj"
+    -- "src/bin/*"
+    |> Seq.iter (Fake.DotNet.DotNet.pack (fun p ->
+        let msBuildParams =
+            {p.MSBuildParams with 
+                Properties = ([
+                    "Version",stableVersionTag
+                    "PackageReleaseNotes",  (release.Notes |> List.map replaceCommitLink |> String.concat "\r\n" )
+                ] @ p.MSBuildParams.Properties)
+            }
+        {
+            p with 
+                MSBuildParams = msBuildParams
+                OutputPath = Some "client/_lib"
+        }
+    ))
+}
+
 let packPrerelease = BuildTask.create "PackPrerelease" [setPrereleaseTag; clean; build; runTests] {
     if promptYesNo (sprintf "package tag will be %s OK?" prereleaseTag )
         then 
             !! "src/**/*.*proj"
             -- "src/bin/*"
             |> Seq.iter (Fake.DotNet.DotNet.pack (fun p ->
-                        let msBuildParams =
-                            {p.MSBuildParams with 
-                                Properties = ([
-                                    "Version", prereleaseTag
-                                    "PackageReleaseNotes",  (release.Notes |> List.map replaceCommitLink  |> String.toLines )
-                                ] @ p.MSBuildParams.Properties)
-                            }
-                        {
-                            p with 
-                                VersionSuffix = Some prereleaseSuffix
-                                OutputPath = Some pkgDir
-                                MSBuildParams = msBuildParams
-                        }
+                let msBuildParams =
+                    {p.MSBuildParams with 
+                        Properties = ([
+                            "Version", prereleaseTag
+                            "PackageReleaseNotes",  (release.Notes |> List.map replaceCommitLink  |> String.toLines )
+                        ] @ p.MSBuildParams.Properties)
+                    }
+                {
+                    p with 
+                        VersionSuffix = Some prereleaseSuffix
+                        OutputPath = Some pkgDir
+                        MSBuildParams = msBuildParams
+                }
             ))
     else
         failwith "aborted"

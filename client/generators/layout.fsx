@@ -6,6 +6,7 @@
 #endif
 
 open Html
+open FsLab.Fornax
 
 let injectWebsocketCode (webpage:string) =
     let websocketScript =
