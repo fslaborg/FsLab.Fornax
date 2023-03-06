@@ -11,4 +11,5 @@ let defaultHeadTags siteTitle = [
     link [Rel "stylesheet"; Href "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"]
     link [Rel "stylesheet"; Href "https://fonts.googleapis.com/css?family=Nunito+Sans"]
     script [ Defer true; Src "https://kit.fontawesome.com/0d3e0ea7a6.js"; CrossOrigin "anonymous"] []
+    link [Rel "stylesheet"; Href "https://cdn.jsdelivr.net/npm/@fslab/fslab-styles"]
 ]
