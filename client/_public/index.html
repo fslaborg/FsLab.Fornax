@@ -61,12 +61,49 @@
         </div>
       </div>
     </nav>
-    <section class="hero is-medium is-bold has-bg-magenta">
+    <section class="hero is-medium has-bg-magenta">
       <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title is-white">
-            {{SITE_TITLE}}
+        <div class="container has-text-justified">
+          <div class="main-TextField">
+            <div class="media mb-4">
+              <div class="media-left">
+                <figure class="image is-128x128">
+                  <img id="logo-square" class="is-rounded" src="/images/logo-rounded.svg"/>
+                </figure>
+              </div>
+              <div class="media-content">
+                <h1 class="main-title is-capitalized is-white is-inline-block is-strongly-emphasized-darkmagenta mb-4">
+                  {{SITE_TITLE}}
+                </h1>
+              </div>
+            </div>
+            <div class="block">
+              <h1 class="title is-size-3 is-capitalized is-white is-block">
+                Welcome to the FsLab template for fornax!
+              </h1>
+            </div>
+            <div class="content is-white is-size-4">
+              <div class="block is-white">
+                Get started by adding some sections below for your project {{SITE_TITLE}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container has-text-justified">
+        <div class="main-TextField">
+          <h1 class="title">
+            here is some code, isn't that nice?
           </h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="main-TextField">
+          <code class="language-fsharp">
+            printfn "hello world"
+          </code>
         </div>
       </div>
     </section>

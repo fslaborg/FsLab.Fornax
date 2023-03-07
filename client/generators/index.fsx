@@ -5,10 +5,43 @@ open Html
 
 let generate' (ctx : SiteContents) (_: string) =
     Layout.layout ctx "Home" [
-        section [Class "hero is-medium is-bold has-bg-magenta"] [
+        section [Class "hero is-medium has-bg-magenta"] [
             div [Class "hero-body"] [
-                div [Class "container has-text-centered"] [
-                    h1 [Class "title is-white"] [!!"{{SITE_TITLE}}"]
+                div [Class "container has-text-justified"] [
+                    div [Class "main-TextField"] [
+                        div [Class "media mb-4"] [
+                            div [Class "media-left"] [
+                                figure [Class "image is-128x128"] [
+                                    img [Id "logo-square"; Class "is-rounded" ; Src (Globals.prefixUrl "images/logo-rounded.svg")]
+                                ]
+                            ]
+                            div [Class "media-content"] [
+                                h1 [Class "main-title is-capitalized is-white is-inline-block is-strongly-emphasized-darkmagenta mb-4"] [!! "{{SITE_TITLE}}"]
+                            ]
+                        ]
+                        div [Class "block"] [
+                            h1 [Class "title is-size-3 is-capitalized is-white is-block"] [!! "Welcome to the FsLab template for fornax!"]
+                        ]
+                        div [Class "content is-white is-size-4"] [
+                            div [Class "block is-white"] [
+                                !! "Get started by adding some sections below for your project {{SITE_TITLE}}"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+        section [] [
+            div [Class "container has-text-justified"] [
+                div [Class "main-TextField"] [
+                    h1 [Class "title"] [!!"here is some code, isn't that nice?"]
+                ]
+            ]
+            div [Class "container"] [
+                div [Class "main-TextField"] [
+                    code [Class "language-fsharp"] [
+                        !! "printfn \"hello world\""
+                    ]
                 ]
             ]
         ]
