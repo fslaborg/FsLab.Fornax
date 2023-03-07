@@ -25,7 +25,7 @@ jobs:
     - name: Pack
       run: ./build.sh packlocal
     - name: fix template strings
-      run: sed -i "s {{BASE_URL}} https://fslab.org/FsLab.Fornax g" ./client/globals.fsx && sed -i "s {{SITE_TITLE}} FsLab.Fornax g" ./client/generators/index.fsx
+      run: sed -i "s {{BASE_URL}} https://fslab.org/FsLab.Fornax g" ./client/globals.fsx && sed -i "s {{SITE_TITLE}} FsLab.Fornax g" ./client/generators/index.fsx && sed -i "s {{SITE_TITLE}} FsLab.Fornax g" ./client/loaders/globalloader.fsx
     - name: Build website
       working-directory: ./client
       run: dotnet fornax build
