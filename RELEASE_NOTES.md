@@ -1,5 +1,7 @@
-### 1.1.0+b06c815 (Released 2023-3-7)
+### 1.1.0+7d03268 (Released 2023-3-7)
 * Additions:
+    * [[#7d03268](https://github.com/fslaborg/FsLab.Fornax/commit/7d0326802f49ca265c595b18f6dd973f8258dad8)] use static version of the components library in template
+    * [[#e05f84d](https://github.com/fslaborg/FsLab.Fornax/commit/e05f84da2f365557dd272b0365fe98a60f761a4e)] update releasenotes
     * [[#b06c815](https://github.com/fslaborg/FsLab.Fornax/commit/b06c815f27d2d225251a66b6d0f9e8e51dc469b1)] Add option to set logo source and link in navbar component
     * [[#73d0980](https://github.com/fslaborg/FsLab.Fornax/commit/73d098094a5fc357e756686c9138ebe862a64b6c)] more replacements in ci
     * [[#e332993](https://github.com/fslaborg/FsLab.Fornax/commit/e332993262f59096f0b1492bcddebd8a4f3f25be)] add base url parameter to template
