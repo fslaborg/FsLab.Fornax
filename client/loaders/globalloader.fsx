@@ -1,5 +1,6 @@
 #r "../_lib/Fornax.Core.dll"
 
+/// Contains gloabl metadata
 type SiteInfo = {
     title: string
     description: string

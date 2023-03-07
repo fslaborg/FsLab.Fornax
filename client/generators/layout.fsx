@@ -8,36 +8,16 @@
 open Html
 open FsLab.Fornax
 
-let injectWebsocketCode (webpage:string) =
-    let websocketScript =
-        """
-        <script type="text/javascript">
-          var wsUri = "ws://localhost:8080/websocket";
-      function init()
-      {
-        websocket = new WebSocket(wsUri);
-        websocket.onclose = function(evt) { onClose(evt) };
-      }
-      function onClose(evt)
-      {
-        console.log('closing');
-        websocket.close();
-        document.location.reload();
-      }
-      window.addEventListener("load", init, false);
-      </script>
-        """
-    let head = "<head>"
-    let index = webpage.IndexOf head
-    webpage.Insert ( (index + head.Length + 1),websocketScript)
+// Can be used to set the active item color in the navbar to the same color as the hero to get a bookmark effect
 let getBgColorForActiveItem (siteTitle:string) =
     match siteTitle with
     | "Home" -> "is-active-link-magenta"
-    | "Data science packages" -> "is-active-link-lightmagenta"
-    | "Tutorials and Blogposts" -> "is-active-link-darkmagenta"
     | _ -> siteTitle
 
 
+/// The main html skeleton generation happens here.
+/// This function embeds `bodyCnt` into the template's html layout.
+/// Use `active` to control the color of the active menu entry.
 let layout (ctx : SiteContents) active bodyCnt =
     let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo> ()
@@ -78,5 +58,5 @@ let render (ctx : SiteContents) cnt =
   cnt
   |> HtmlElement.ToString
 #if WATCH
-  |> injectWebsocketCode 
+  |> Globals.injectWebsocketCode 
 #endif
