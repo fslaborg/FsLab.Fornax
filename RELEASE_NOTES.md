@@ -1,5 +1,6 @@
-### 2.0.0+347900a (Released 2023-3-7)
+### 2.0.0+750228c (Released 2023-3-7)
 * Additions:
+    * [[#750228c](https://github.com/fslaborg/FsLab.Fornax/commit/750228cc57d00ea521d23d6436b00e07c5d5cb04)] Update to .net 6 and use the new fornax core package
     * [[#347900a](https://github.com/fslaborg/FsLab.Fornax/commit/347900ad4031303da8b19a39d625e8ec2c1510dc)] another workflow improvement
 
 ### 1.1.0+7d03268 (Released 2023-3-7)
