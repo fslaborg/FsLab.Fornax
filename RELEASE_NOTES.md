@@ -1,3 +1,13 @@
+### 1.1.0+e332993 (Released 2023-3-7)
+* Additions:
+    * [[#e332993](https://github.com/fslaborg/FsLab.Fornax/commit/e332993262f59096f0b1492bcddebd8a4f3f25be)] add base url parameter to template
+    * [[#cc5eba0](https://github.com/fslaborg/FsLab.Fornax/commit/cc5eba0c69f190f6ca08610bf87e82c762145958)] ignore fornax build artifacts
+    * [[#f5b48db](https://github.com/fslaborg/FsLab.Fornax/commit/f5b48db23881c941a6ad9aa7d8f9520fd01a79cf)] automatic gh pages deploy
+* Deletions:
+    * [[#1bc7a7d](https://github.com/fslaborg/FsLab.Fornax/commit/1bc7a7d5bf7e7338801d97a39528202a749d0519)] remove fornax build artifacts
+* Bugfixes:
+    * [[#c65e509](https://github.com/fslaborg/FsLab.Fornax/commit/c65e509e9b4d190d657105bb6e0e17ad582065ab)] fix fornax output path in ci
+
 ### 1.0.0+7236801 (Released 2023-3-7)
 * Additions:
     * [[#7236801](https://github.com/fslaborg/FsLab.Fornax/commit/7236801ba8a288b1628f4fd698d3578d72af4d39)] Finish template setup
