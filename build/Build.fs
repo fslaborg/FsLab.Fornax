@@ -16,6 +16,9 @@ open TestTasks
 open PackageTasks
 open DocumentationTasks
 open ReleaseTasks
+open ReleaseNotesTasks
+
+let _ = ReleaseNotesTasks.githubDraft |> ignore
 
 /// Full release of nuget package, git tag, and documentation for the stable version.
 let _release = 

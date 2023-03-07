@@ -25,6 +25,6 @@ let clean = BuildTask.create "Clean" [] {
 }
 
 let build = BuildTask.create "Build" [clean] {
-    solutionFile
+    "src/FsLab.Fornax/FsLab.Fornax.fsproj"
     |> DotNet.build id
 }
