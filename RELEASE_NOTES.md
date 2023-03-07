@@ -1,3 +1,11 @@
+### 2.1.0+86d6ba2 (Released 2023-3-7)
+* Additions:
+    * [[#32f6307](https://github.com/fslaborg/FsLab.Fornax/commit/32f63074cf4f40d99b0f217ba640556b247d0895)] update releasenotes
+    * [[#03d80ec](https://github.com/fslaborg/FsLab.Fornax/commit/03d80ec3952da9e8116fd27eea45515cb336ec6c)] update readme
+    * [[#d6b19ea](https://github.com/fslaborg/FsLab.Fornax/commit/d6b19ea63030551fae8500c9b9b25aa74af90db2)] Update README.md
+    * [[#d5ed931](https://github.com/fslaborg/FsLab.Fornax/commit/d5ed9317725a3137466e0322787e6378ce02df1b)] update fornax version in template
+    * [[#86d6ba2](https://github.com/fslaborg/FsLab.Fornax/commit/86d6ba2bd4a3cf529d19298cd8faef1957d38f75)] Add xml docs
+
 ### 2.0.0+750228c (Released 2023-3-7)
 * Additions:
     * [[#750228c](https://github.com/fslaborg/FsLab.Fornax/commit/750228cc57d00ea521d23d6436b00e07c5d5cb04)] Update to .net 6 and use the new fornax core package
