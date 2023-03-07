@@ -1,0 +1,38 @@
+name: deploy-gh-pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup .NET 5
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore tools
+      run: dotnet tool restore
+    - name: make script executable
+      run: chmod u+x build.sh
+    - name: Build
+      run: ./build.sh
+    - name: Pack
+      run: ./build.sh packlocal
+    - name: fix template strings
+      run: sed -i "s {{BASE_URL}} https://fslab.org/FsLab.Fornax g" ./client/globals.fsx && sed -i "s {{SITE_TITLE}} FsLab.Fornax g" ./client/generators/index.fsx
+    - name: Build website
+      working-directory: ./client
+      run: dotnet fornax build
+    - name: deploy
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: ./client/output # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
