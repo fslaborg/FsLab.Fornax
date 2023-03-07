@@ -11,6 +11,12 @@
     "shortName": "fslab-web",
     "sourceName": "FsLab.Fornax.Template",
     "symbols": {
+        "base-url": {
+            "description": "The base url of the deployed site, will be used when building the static htmls to prefix urls",
+            "type": "parameter",
+            "replaces": "{{BASE_URL}}",
+            "defaultValue": ""
+        },
         "site-title": {
             "description": "The title of the site, will be used in page metadata",
             "type": "parameter",

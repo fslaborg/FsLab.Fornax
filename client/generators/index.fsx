@@ -24,7 +24,7 @@ let generate' (ctx : SiteContents) (_: string) =
                         ]
                         div [Class "content is-white is-size-4"] [
                             div [Class "block is-white"] [
-                                !! "Get started by adding some sections below for your project {{SITE_TITLE}}"
+                                !! "This is how the blank template looks like. Flashy but boring! Get started by adding some sections below for your project {{SITE_TITLE}}!"
                             ]
                         ]
                     ]
