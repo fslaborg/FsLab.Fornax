@@ -1,5 +1,7 @@
-### 1.1.0+e332993 (Released 2023-3-7)
+### 1.1.0+b06c815 (Released 2023-3-7)
 * Additions:
+    * [[#b06c815](https://github.com/fslaborg/FsLab.Fornax/commit/b06c815f27d2d225251a66b6d0f9e8e51dc469b1)] Add option to set logo source and link in navbar component
+    * [[#73d0980](https://github.com/fslaborg/FsLab.Fornax/commit/73d098094a5fc357e756686c9138ebe862a64b6c)] more replacements in ci
     * [[#e332993](https://github.com/fslaborg/FsLab.Fornax/commit/e332993262f59096f0b1492bcddebd8a4f3f25be)] add base url parameter to template
     * [[#cc5eba0](https://github.com/fslaborg/FsLab.Fornax/commit/cc5eba0c69f190f6ca08610bf87e82c762145958)] ignore fornax build artifacts
     * [[#f5b48db](https://github.com/fslaborg/FsLab.Fornax/commit/f5b48db23881c941a6ad9aa7d8f9520fd01a79cf)] automatic gh pages deploy
