@@ -4,7 +4,7 @@
 open Html
 
 let generate' (ctx : SiteContents) (_: string) =
-    Layout.layout ctx "Home" [
+    Layout.layout ctx "{{SITE_TITLE}}" [
         section [Class "hero is-medium has-bg-magenta"] [
             div [Class "hero-body"] [
                 div [Class "container has-text-justified"] [

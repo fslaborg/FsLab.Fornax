@@ -6,12 +6,13 @@ type Components() =
 
     static member DefaultHeadTags(siteTitle: string) = DefaultHeadTagsComponent.defaultHeadTags siteTitle
 
-    static member Navbar(?LogoLink: string, ?MenuEntries: HtmlElement list, ?SocialLinks: HtmlElement list) = 
-        let logoLink = defaultArg LogoLink (TemplateConfig.PrefixUrl "/images/favicon.png")
+    static member Navbar(?LogoSource: string, ?LogoLink: string, ?MenuEntries: HtmlElement list, ?SocialLinks: HtmlElement list) = 
+        let logoSource = defaultArg LogoSource (TemplateConfig.PrefixUrl "/images/favicon.png")
+        let logoLink = defaultArg LogoLink (TemplateConfig.PrefixUrl "/")
         let menuEntries = defaultArg MenuEntries []
         let socialLinks = defaultArg SocialLinks []
 
-        NavbarComponent.fslabNavbar logoLink menuEntries socialLinks
+        NavbarComponent.fslabNavbar logoSource logoLink menuEntries socialLinks
 
     static member FooterIconLink(iconClass: string, text: string, link: string) =
         FooterComponent.footerIconLink iconClass text link

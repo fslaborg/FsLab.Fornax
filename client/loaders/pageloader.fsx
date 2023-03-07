@@ -10,6 +10,6 @@ type Page = {
 let loader (projectRoot: string) (siteContent: SiteContents) =
 
     // currently, only the Home page (index.fsx) is there
-    siteContent.Add({title = "Home"; link = "/"})
+    siteContent.Add({title = "{{SITE_TITLE}}"; link = "/{{SITE_TITLE}}"})
 
     siteContent

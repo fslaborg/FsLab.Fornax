@@ -11,7 +11,7 @@ open FsLab.Fornax
 // Can be used to set the active item color in the navbar to the same color as the hero to get a bookmark effect
 let getBgColorForActiveItem (siteTitle:string) =
     match siteTitle with
-    | "Home" -> "is-active-link-magenta"
+    | "{{SITE_TITLE}}" -> "is-active-link-magenta"
     | _ -> siteTitle
 
 
@@ -42,7 +42,8 @@ let layout (ctx : SiteContents) active bodyCnt =
         ]
         body [] [
             Components.Navbar(
-                LogoLink = (Globals.prefixUrl "images/favicon.png"),
+                LogoSource = (Globals.prefixUrl "images/favicon.png"),
+                LogoLink = "https://fslab.org",
                 MenuEntries = menuEntries,
                 SocialLinks = [
                     a [Class "navbar-item is-magenta"; Href "https://twitter.com/fslaborg"] [Components.Icon "fab fa-twitter"]
