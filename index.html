@@ -1,22 +1,6 @@
 <html class="has-navbar-fixed-top">
   <head>
-
-        <script type="text/javascript">
-          var wsUri = "ws://localhost:8080/websocket";
-      function init()
-      {
-        websocket = new WebSocket(wsUri);
-        websocket.onclose = function(evt) { onClose(evt) };
-      }
-      function onClose(evt)
-      {
-        console.log('closing');
-        websocket.close();
-        document.location.reload();
-      }
-      window.addEventListener("load", init, false);
-      </script>
-            <meta charSet="utf-8"/>
+    <meta charSet="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>
       {{SITE_TITLE}}
@@ -26,14 +10,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans"/>
     <script defer="true" src="https://kit.fontawesome.com/0d3e0ea7a6.js" crossOrigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fslab/fslab-styles"/>
-    <script src="/js/navbar.js"></script>
-    <script src="/js/prism.js"></script>
+    <script src="https://fslab.org/FsLab.Fornax/js/navbar.js"></script>
+    <script src="https://fslab.org/FsLab.Fornax/js/prism.js"></script>
   </head>
   <body>
     <nav class="navbar is-fixed-top">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="/images/favicon.png" alt="Logo"/>
+          <img src="https://fslab.org/FsLab.Fornax/images/favicon.png" alt="Logo"/>
         </a>
         <a class="navbar-burger" data-target="navMenu" aria-label="menu" role="button" aria-expanded="false">
           <span aria-hidden="true"></span>
@@ -68,12 +52,12 @@
             <div class="media mb-4">
               <div class="media-left">
                 <figure class="image is-128x128">
-                  <img id="logo-square" class="is-rounded" src="/images/logo-rounded.svg"/>
+                  <img id="logo-square" class="is-rounded" src="https://fslab.org/FsLab.Fornax/images/logo-rounded.svg"/>
                 </figure>
               </div>
               <div class="media-content">
                 <h1 class="main-title is-capitalized is-white is-inline-block is-strongly-emphasized-darkmagenta mb-4">
-                  {{SITE_TITLE}}
+                  FsLab.Fornax
                 </h1>
               </div>
             </div>
@@ -84,7 +68,7 @@
             </div>
             <div class="content is-white is-size-4">
               <div class="block is-white">
-                Get started by adding some sections below for your project {{SITE_TITLE}}
+                Get started by adding some sections below for your project FsLab.Fornax
               </div>
             </div>
           </div>
