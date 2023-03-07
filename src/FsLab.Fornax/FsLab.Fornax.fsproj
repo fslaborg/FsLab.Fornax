@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
@@ -16,10 +16,6 @@
     <RepositoryUrl>https://github.com/fslaborg/FsLab.Fornax</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="_lib\Fornax.Core.dll">
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)</PackagePath>
-    </Content>
     <Compile Include="TemplateConfig.fs" />
     <Compile Include="Components\DefaultLinks.fs" />
     <Compile Include="Components\Icon.fs" />
@@ -28,12 +24,7 @@
     <Compile Include="Components.fs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Fornax">
-      <HintPath>_lib\Fornax.Core.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
+    <PackageReference Include="Fornax.Core" Version="0.15.1" />
     <PackageReference Include="Markdig" Version="0.30.2" />
-    <PackageReference Update="FSharp.Core" Version="6.*" />
   </ItemGroup>
 </Project>

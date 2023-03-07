@@ -1,7 +1,8 @@
 // This file contains functions that can be used everywhere.
 // it should be loaded as the first scriptg in a new loader or generator.
 
-#r "nuget: FsLab.Fornax, 1.1.0"
+#r "nuget: Fornax.Core, 0.15.1"
+#r "nuget: FsLab.Fornax, 2.0.0"
 
 // fix urls when deployed to base url (e.g. on gh pages via subdomain)
 #if WATCH
