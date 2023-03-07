@@ -45,7 +45,7 @@ Template options:
 
 ## developing the website
 
-In the root of your generated folder, run
+In `/src` run
 
 ```
 dotnet tool restore
@@ -54,7 +54,7 @@ dotnet fornax watch
 
 ## publishing the website
 
-In the root of your generated folder, run
+In `/src` run
 
 ```
 dotnet fornax build
