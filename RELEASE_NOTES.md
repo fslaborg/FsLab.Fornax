@@ -1,3 +1,11 @@
+### 2.2.0+73757b9 (Released 2023-3-9)
+* Additions:
+    * [[#43dfa27](https://github.com/fslaborg/FsLab.Fornax/commit/43dfa27642eef46f0453e908387c7b8859443c1a)] use .net 6 in ci
+    * [[#1f973a1](https://github.com/fslaborg/FsLab.Fornax/commit/1f973a17e6528bb66ef245acc6046e1302326f0b)] update package usage in template
+    * [[#49299a3](https://github.com/fslaborg/FsLab.Fornax/commit/49299a3b763b46e06c071782cd38a9e79d287df1)] update releasenotes
+* Bugfixes:
+    * [[#73757b9](https://github.com/fslaborg/FsLab.Fornax/commit/73757b910834de5d93f9b5e48fda76c58827a2ae)] Add option for fixing navbar to top
+
 ### 2.1.0+86d6ba2 (Released 2023-3-7)
 * Additions:
     * [[#32f6307](https://github.com/fslaborg/FsLab.Fornax/commit/32f63074cf4f40d99b0f217ba640556b247d0895)] update releasenotes
