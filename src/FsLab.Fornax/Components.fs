@@ -17,22 +17,25 @@ type Components() =
     /// <summary>
     /// A sticky-top navbar component with customizable menu items and social links
     /// </summary>
+    /// <param name="IsFixed">wether ot not the navbar is fixed to the top of the page</param>
     /// <param name="LogoSource">the source url for the logo image in the left corner</param>
     /// <param name="LogoLink">The link for clicking on the logo</param>
     /// <param name="MenuEntries">the entries on the left of the lavbar</param>
     /// <param name="SocialLinks">the social links on the right of the navbar</param>
     static member Navbar(
+        ?IsFixed: bool,
         ?LogoSource: string, 
         ?LogoLink: string, 
         ?MenuEntries: HtmlElement list, 
         ?SocialLinks: HtmlElement list
     ) = 
+        let isFixed = defaultArg IsFixed true
         let logoSource = defaultArg LogoSource (TemplateConfig.PrefixUrl "/images/favicon.png")
         let logoLink = defaultArg LogoLink (TemplateConfig.PrefixUrl "/")
         let menuEntries = defaultArg MenuEntries []
         let socialLinks = defaultArg SocialLinks []
 
-        NavbarComponent.fslabNavbar logoSource logoLink menuEntries socialLinks
+        NavbarComponent.fslabNavbar isFixed logoSource logoLink menuEntries socialLinks
 
     /// <summary>
     /// A component containing a link with a font awesome icon to the left.

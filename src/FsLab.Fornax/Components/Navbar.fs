@@ -3,8 +3,10 @@
 open Html
 open FsLab.Fornax
 
-let fslabNavbar (logoSource:string) (logoLink:string) (menuEntries: HtmlElement list) (socialLinks: HtmlElement list) =
-    nav [Class "navbar is-fixed-top"] [
+let fslabNavbar (isFixed: bool) (logoSource:string) (logoLink:string) (menuEntries: HtmlElement list) (socialLinks: HtmlElement list) =
+    
+
+    nav [Class (if isFixed then "navbar is-fixed-top" else "navbar")] [
         div [Class "navbar-brand"] [
             a [Class "navbar-item"; Href logoLink] [
                     img [Src logoSource; Alt "Logo"]
