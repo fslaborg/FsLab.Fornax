@@ -27,7 +27,7 @@ let fslabInfoFooterBlock =
         ]
         div [Class "block"] [
             footerIconLink "fas fa-code-branch" "website source code" "https://github.com/fslaborg/fslaborg.github.io"
-            footerIconLink "far fa-handshake" "fslab contributors" "https://github.com/orgs/fslaborg/people"
+            footerIconLink "far fa-handshake" "FsLab contributors" "https://github.com/orgs/fslaborg/people"
         ]
     ]
 
@@ -38,8 +38,8 @@ let fslabMoreFooterBlock =
         ]
         div [Class "block"] [
             div [Class "block"] [
-                footerIconLink "fab fa-github" "the fslab organisation on github" "https://github.com/fslaborg?type=source"
-                footerIconLink "fab fa-twitter" "fslab on twitter" "https://twitter.com/fslaborg"
+                footerIconLink "fab fa-github" "the FsLab organisation on github" "https://github.com/fslaborg?type=source"
+                footerIconLink "fab fa-twitter" "FsLab on twitter" "https://twitter.com/fslaborg"
             ]
             div [Class "block"] [
                 footerIconLink "fas fa-cubes" "endorsed packages" "https://fslab.org/packages.html"
@@ -47,8 +47,8 @@ let fslabMoreFooterBlock =
                                 
             ]
             div [Class "block"] [
-                footerIconLink "fas fa-graduation-cap" "tutorials and learning resources" "https://fslab.org/tutorials.html"
-                footerIconLink "fas fa-plus" "add tutorial content" "https://github.com/fslaborg/fslaborg.github.io#add-a-tutorial-guide-or-blogpost"
+                footerIconLink "fas fa-graduation-cap" "blog" "https://fslab.org/blog"
+                footerIconLink "fas fa-plus" "start posting on the FsLab blog" "https://github.com/fslaborg/blog?tab=readme-ov-file#add-content"
             ]
         ]
     ]
