@@ -1,3 +1,9 @@
+### 2.3.0+8a83e14 (Released 2023-12-26)
+* Additions:
+    * [[#0f1e9c4](https://github.com/fslaborg/FsLab.Fornax/commit/0f1e9c450bf30afe2d05668e5e3f044be0111b27)] update releasenotes
+* Bugfixes:
+    * [[#8a83e14](https://github.com/fslaborg/FsLab.Fornax/commit/8a83e14aef4f8ccff875bb63bd7bc49759974887)] fix footer tutorial links
+
 ### 2.2.0+73757b9 (Released 2023-3-9)
 * Additions:
     * [[#43dfa27](https://github.com/fslaborg/FsLab.Fornax/commit/43dfa27642eef46f0453e908387c7b8859443c1a)] use .net 6 in ci
