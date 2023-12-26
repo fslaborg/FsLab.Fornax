@@ -1,5 +1,6 @@
-### 2.3.0+8a83e14 (Released 2023-12-26)
+### 2.3.0+c0f2401 (Released 2023-12-26)
 * Additions:
+    * [[#c0f2401](https://github.com/fslaborg/FsLab.Fornax/commit/c0f24010ea0123f953ef36e53c9bce7196e12b19)] update component version in template
     * [[#0f1e9c4](https://github.com/fslaborg/FsLab.Fornax/commit/0f1e9c450bf30afe2d05668e5e3f044be0111b27)] update releasenotes
 * Bugfixes:
     * [[#8a83e14](https://github.com/fslaborg/FsLab.Fornax/commit/8a83e14aef4f8ccff875bb63bd7bc49759974887)] fix footer tutorial links
